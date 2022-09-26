@@ -1,0 +1,73 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+    input[type="checkbox"]:checked + div.div2::after{
+      content: none;
+    }
+
+   .div2{
+    position: relative;
+   }
+   div.div2::after{
+    position: absolute;
+    content:" ";
+    top: 0;
+    left: 0;
+    background-color: red;
+    z-index:10;
+    height: 130%;
+    width: 130%;
+    -webkit-filter: blur(2px);
+   }
+
+</style>
+<body>
+    <label for="toggleLock">Click to unlock</label>
+    <input type="checkbox" id="toggleLock" hidden>
+   <div class="div2">
+        <a href="https://google.com">Shubhankar</a>
+   </div>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button onclick="aj(); return false;">submit</button>
+  <div id="hello">
+
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+function aj(){
+
+  $.post("demo_test_post.asp",
+  {
+    name: "Donald Duck",
+    city: "Duckburg"
+  },
+  function(data, status){
+    alert("Data: " + data + "\nStatus: " + status);
+  });
+
+}
+</script>
+
+</body>
+</html>
+
+

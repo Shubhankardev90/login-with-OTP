@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="./main.css" rel="stylesheet">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Open+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+
+<style>
+    @media(max-height:700px){
+    .formContainer{
+        min-height:140vh;
+    }
+}
+</style>
+
+<body style="overflow-x: hidden;">
+    <div class="formContainer">
+        <h3 class="logo">Minimals</h3>
+        <form action="" class="loginForm">
+            <img src="./logo.png" alt="" height="30px" style="margin-bottom:10px">
+            <h3 class="mainHeading">Welcome to Minimals.</h3>
+            <h3 class="secondHeading mb2">Let's get you signed up</h3>
+            <div class="nameGroup">
+                <div class="formGroup">
+                    <label for="fname" class="label mt2 ">First Name</label>
+                    <input type="text" id="fname">
+                    <p class="errorText"></p>
+                </div>
+                <div class="formGroup">
+                    <label for="lname" class="label mt2 ">Last Name</label>
+                    <input type="text" id="lname">
+                    <p class="errorText"></p>
+                </div>
+            </div>
+            <div class="sepratedGroup">
+                <div class="formGroup"style="flex:1">
+                    <label for="country" class="label mb1 ">Country</label>
+                    <select name="" id="country"class="ips"style="margin-right:10px;padding:0 5px">
+                        <option value="1">Ind</option>
+                        <option value="1">Ind</option>
+                        <option value="1">Ind</option>
+                        <option value="1">Ind</option>
+                        <option value="1">Ind</option>
+                        <option value="1">Ind</option>
+                    </select>
+                    <p class="errorText"></p>
+                   </div>
+                   <div class="formGroup"style="flex:3">
+                    <label for="phone" class="label mb1">Phone</label>
+                    <input type="phone"id="phone"placeholder="Enter a valid phone number">
+                    <p class="errorText"></p>
+                   </div>
+              </div>
+            <div class="formGroup">
+                <label for="email" class="label ">Email</label>
+                <input type="email" id="email">
+                <p class="errorText"></p>
+            </div>
+            <div class="formGroup">
+                <label for="password" class="label mt2 ">Enter Password</label>
+                <input type="password" id="password">
+                <p class="errorText"></p>
+            </div>
+            <div class="formGroup">
+                <label for="password" class="label mt2 ">Confirm Password</label>
+                <input type="password" id="password">
+                <p class="errorText"></p>
+            </div>
+            <div class="" style="">
+                <div class="checkGroup" style="align-items: flex-start;">
+                    <input type="checkbox" id="tick" class="label"style="margin-top:3px">
+                    <label for="tick" style="color:#5b5b60;font-size:12px">By creating a new account you are agreeing to our <strong style="color:#000000">Terms & Conditions </strong> and <strong style="color:#000000">Privacy Policies</strong>  </label>
+                </div>
+            </div>
+            <div class="loginBox" style="margin-top:10px;">
+                <button type="button" style="color:#ffffff;border:none;background-color: black;margin-top:10px">Signin
+                    with OTP</button>
+                <p class="secondHeading" style="margin-top:10px;text-align:center;font-size:14px"><span>Already a Minimalists</span> <a href="#" class="imps">Login to your account</a> </p>
+            </div>
+        </form>
+        <div class="bottomLinks">
+            <a href="#">Minimal terms and condition</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Use</a>
+            <a href="#">Minimal &copy; 2022 all rights reserved</a>
+        </div>
+    </div>
+
+</body>
+
+</html>

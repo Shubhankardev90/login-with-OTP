@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="./main.css" rel="stylesheet">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Open+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="formContainer">
+        <h3 class="logo">Minimals</h3>
+        <form action="" class="loginForm">
+            <img src="./logo.png" alt="" height="30px" style="margin-bottom:10px">
+            <h3 class="mainHeading">Just One More Step</h3>
+            <p class="secondHeading mb2"><small><strong>We are Just Making sure its you</strong> </small></p>
+            <div class="otpContainer">
+                <div class="formGroup"> 
+                    <input type="text" id="otp1" class="otpIps" maxlength="1" data-next="otp2" >
+                    <p class="errorText"></p>
+                </div>
+                <div class="formGroup"> 
+                    <input type="text" id="otp2" class="otpIps" maxlength="1" data-next="otp3" data-prev="otp1">
+                    <p class="errorText"></p>
+                </div>
+                <div class="formGroup"> 
+                    <input type="text" id="otp3" class="otpIps" maxlength="1" data-next="otp4"data-prev="otp2">
+                    <p class="errorText"></p>
+                </div>
+                <div class="formGroup"> 
+                    <input type="text" id="otp4" class="otpIps" maxlength="1"data-prev="otp3">
+                    <p class="errorText"></p>
+                </div>
+            </div>
+            <h5>Please enter the OTP sent to your mobile number</h5>
+            <p class="secondHeading"><small>We Have sent you a <strong style="color: #000000;">SMS</strong> with verification code</small></p>
+            <p class="secondHeading"><small>Didn't recieve the code ? <strong style="color: #000000;"id="time">( Resend in 30s )</strong></small></p>
+            <div class="loginBox" style="margin-top:40px;">
+                <button type="submit" style="color:#ffffff;border:none;background-color: #000000;"id="submitLog">Verify</button>
+            </div>
+            <div class="backButton">
+                <a href="#"><i class="fa fa-chevron-left"></i> Back</a>
+            </div>
+        </form>
+       
+        <div class="bottomLinks">
+            <a href="#">Minimal terms and condition</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Use</a>
+            <a href="#">Minimal &copy; 2022 all rights reserved</a>
+        </div>
+    </div>
+
+    <script>
+    let timeLeft = 30;
+    let elem = document.getElementById('time');
+    let submitLog=document.getElementById('submitLog')
+    let timerId = setInterval(countdown, 1000);
+    
+    function countdown() {
+      if (timeLeft == -1) {
+        clearTimeout(timerId);
+        submitLog.disabled=false;
+       
+      } else {
+        submitLog.disabled=true;
+        elem.innerHTML = `( Resend in ${timeLeft}s )`;
+        timeLeft--;
+      }
+    }
+
+
+    let otpIps=document.getElementsByClassName('otpIps')
+    for (let i = 0; i < otpIps.length; i++) {
+       otpIps[i].addEventListener('keyup',function(e) {
+       if(e.keyCode == 8){
+        this.value=""
+        let prev=this.dataset.prev
+        document.getElementById(`${prev}`).focus()
+       }else{
+        let next=this.dataset.next
+       document.getElementById(`${next}`).focus()
+       }
+       })
+    }
+    </script>
+
+</body>
+
+</html>

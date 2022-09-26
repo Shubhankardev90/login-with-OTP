@@ -1,0 +1,282 @@
+/* font-family: 'Open Sans', sans-serif;
+font-family: 'Roboto', sans-serif; */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.formContainer{
+    background-color:#f6f6fb;
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Open Sans', sans-serif;
+    flex-direction: column;
+    position: relative;
+    
+}
+.formContainer form{
+    background-color:#ffffff;
+    width: 40%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 20px;
+    position: relative;
+}
+.bottomLinks{
+    width:60%;
+    display:flex;
+    align-items: center;
+    justify-content:space-between;
+    padding:20px 0;
+    position:absolute;
+    bottom:10px;
+    text-align: center;
+}
+.bottomLinks a{
+    font-size: 0.7rem;
+    text-align: center;
+    color: #5b5b60;
+}
+.formContainer input{
+    border-radius: 5px;
+}
+.mainHeading{
+    color: #000000;
+}
+.secondHeading{
+    color: #494949;
+    font-weight: 600;
+    
+}
+.formGroup{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.checkGroup{
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+.checkGroup label{
+    margin-bottom:0px;
+}
+.formGroup input{
+    color: #585858;
+    border: 1.5px solid #c8c8c8;
+    padding: 0 20px;
+}
+.formGroup input:not(checkbox){
+    height:40px;
+}
+.ips{
+    height:40px;
+    color: #585858;
+    border: 1.5px solid #c8c8c8;
+    border-radius:5px;
+}
+.label{
+    color:#333333;
+    font-weight: 600;
+    font-size:14px;
+}
+.mb2{
+    margin-bottom:1rem;
+}
+.mt2{
+    margin-top:1rem;
+}
+.mt1{
+    margin-top:0.5rem;
+}
+.mb1{
+    margin-bottom:0.3rem;
+}
+.sepratedGroup{
+    display: flex;
+    justify-content:space-between;
+    align-items:center;
+    width:100%;
+    margin: 10px 0;
+}
+.imps{
+    color: #0070c9;
+    text-decoration: none;
+}
+.loginBox{
+    width:100%;
+}
+.loginBox button{
+    width:100%;
+    height:40px;
+    font-weight: 600;
+    border-radius:5px;
+}
+
+a{
+    text-decoration:none;
+}
+.errorText{
+    font-size:12px;
+    color: red;
+    margin-top:3px;
+    font-weight:bold;
+}
+.errorIp{
+    border: 1.5px solid red !important;
+}
+
+
+@media(max-width:800px){
+    .formContainer form{
+        width: 70%;
+    }
+    .bottomLinks{
+        width: 90%;
+    }
+}
+@media(max-width:500px){
+    .formContainer form{
+        width: 95%;
+    }
+    .bottomLinks{
+        width: 90%;
+        display:inline!important;
+    }
+    .bottomLinks a{
+        margin:10px;
+    }
+}
+
+
+
+
+
+.otpContainer{
+    display: flex;
+    justify-content:center;
+    padding: 30px;
+    width: 60%;
+}
+.otpContainer input{
+    width: 25%;
+}
+.otpContainer .formGroup{
+    align-items: center;
+    
+}
+
+button:disabled{
+    cursor: not-allowed;
+}
+.otpIps{
+padding:2px !important;
+min-width:40px !important;
+text-align:center !important;
+font-size:20px !important;
+
+}
+
+
+@media(max-width:1100px){
+    .otpContainer{
+width:80%;
+    }
+}
+
+
+.backButton{
+    position:absolute;
+    top: 10px;
+    left: 20px;
+}
+.backButton a{
+    color: #000000;
+    font-size:14px;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+}
+.backButton a i{
+    font-size:12px;
+    margin-right: 5px;
+}
+
+
+
+
+.nameGroup{
+    width: 100%;
+    display: flex;
+    justify-content:space-between;
+    gap: 10px;
+    position: relative;
+}
+
+
+@media(max-width:1200px){
+    .nameGroup{
+        flex-direction: column;
+        gap: 0;
+    }
+    .nameGroup .mt2:nth-of-type(2){
+        margin-top:0;
+    }
+}
+
+
+
+
+.dateContainer{
+    display: flex;
+    gap: 10px;
+    width: 80%;
+    margin-bottom: 20px;
+}
+.dateContainer select{
+    height:40px;
+    text-align: center;
+    font-weight: 600;
+    border: 1.5px solid #c8c8c8;
+    border-radius: 5px;
+}
+
+
+@media(max-width:500px){
+    .dateContainer{
+        width: 90%;
+    }
+}
+
+
+
+.successBox{
+    text-align: center;
+    margin: 40px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.successBox i{
+    border-radius: 50%;
+    font-size:30px;
+    border: 2px solid black;
+   height: 60px;
+   width: 60px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 10;
+}
